@@ -142,8 +142,10 @@ pip install -e ".[dev]"
 billhound audit
 ```
 
-Then the tests, including the one that matters most — a correct bill must produce
-absolutely nothing:
+Then the tests — 36 of them, none needing credentials. The two that matter most are
+`test_clean_bill_raises_nothing` (a correct bill produces absolutely nothing) and
+`test_clean_bill_never_reaches_the_strategist` (the graph proves it, not just the
+rules):
 
 ```bash
 pytest -q
@@ -163,6 +165,21 @@ billhound watch --trace
 the fixed sample layout, and the strategist writes the dispute letter itself — in
 German when the vendor is German.
 
+### Running the graph without AWS
+
+```bash
+billhound watch --offline
+```
+
+This drives the **real** graph, the real tools, the real conditional edge and the
+real HITL intervention — but replies with a scripted `Model` implementation instead
+of calling Bedrock. It proves the wiring, not the reasoning, and it says so on every
+run. It exists because `watch` is the path that matters, and testing it only against
+live Bedrock means never testing it at all.
+
+What it cannot do is the part that genuinely needs a model: reading a document it has
+never seen, and writing the letter.
+
 ## Repo layout
 
 ```
@@ -180,7 +197,10 @@ samples/
   stadtwerke/          an overcharging energy provider
   kabelnetz/           a flawless internet provider — the silence case
   streamco/            a correct but immortal subscription
-tests/                 24 tests, all of them about not lying about money
+  offline_model.py     a scripted Model implementation, so the graph is testable with no AWS
+tests/
+  test_rules.py        24 tests on the audit engine — mostly about not lying about money
+  test_graph.py        12 end-to-end tests on the real graph and the real HITL gate
 ```
 
 ## What is not built yet
@@ -188,7 +208,9 @@ tests/                 24 tests, all of them about not lying about money
 Being straight about the edges:
 
 - **Live portal submission is a dry run.** The plumbing and the approval gate are
-  real; pointing it at a live vendor portal is deliberately left disarmed.
+  real and tested — declining the gate submits nothing, and approving it still
+  dry-runs unless `BILLHOUND_LIVE=1`. Pointing it at a live vendor portal is
+  deliberately left disarmed.
 - **Ingestion is text.** PDF and scan handling routes through Bedrock vision in
   `watch`; there is no Textract pipeline yet.
 - **Storage is JSON on disk.** DynamoDB is the obvious next step, not a written one.
