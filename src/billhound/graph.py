@@ -16,9 +16,9 @@ from .agents import build_agents
 from .case import Case
 
 
-def build_graph(case: Case, model=None):
+def build_graph(case: Case, model=None, verbose: bool = False):
     """Wire the cast into a graph whose routing depends on the case, not on prose."""
-    agents = build_agents(case, model=model)
+    agents = build_agents(case, model=model, verbose=verbose)
 
     builder = GraphBuilder()
     builder.add_node(agents["extractor"], "extractor")
@@ -50,9 +50,9 @@ Vendor context: {vendor_hint}
 """
 
 
-async def run_case(case: Case, model=None):
+async def run_case(case: Case, model=None, verbose: bool = False):
     """Push one bill through the graph. Returns (GraphResult, agents)."""
-    graph, agents = build_graph(case, model=model)
+    graph, agents = build_graph(case, model=model, verbose=verbose)
     task = TASK.format(
         source=case.source,
         vendor_hint=(

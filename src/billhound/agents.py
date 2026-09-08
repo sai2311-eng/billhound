@@ -89,14 +89,21 @@ exactly as returned.
 """
 
 
-def build_agents(case: Case, model=None) -> dict[str, Agent]:
-    """The graph's cast. All four share one toolset bound to one case."""
+def build_agents(case: Case, model=None, verbose: bool = False) -> dict[str, Agent]:
+    """The graph's cast. All four share one toolset bound to one case.
+
+    `verbose` restores Strands' default streaming print. It is off by default:
+    the product's output is the escalation, and agent chatter interleaved with
+    it makes the one thing the human needs to read harder to find.
+    """
     model = model or make_model()
     tools = build_tools(case)
     by_name = {t.tool_name: t for t in tools}
+    quiet = {} if verbose else {"callback_handler": None}
 
     extractor = Agent(
         name="extractor",
+        **quiet,
         description="Transcribes a raw billing document into a validated Bill.",
         model=model,
         system_prompt=EXTRACTOR_PROMPT,
@@ -105,6 +112,7 @@ def build_agents(case: Case, model=None) -> dict[str, Agent]:
 
     auditor = Agent(
         name="auditor",
+        **quiet,
         description="Runs deterministic audit rules and reports what they found.",
         model=model,
         system_prompt=AUDITOR_PROMPT,
@@ -113,6 +121,7 @@ def build_agents(case: Case, model=None) -> dict[str, Agent]:
 
     strategist = Agent(
         name="strategist",
+        **quiet,
         description="Decides the recommendation and drafts the outbound message.",
         model=model,
         system_prompt=STRATEGIST_PROMPT,
@@ -124,6 +133,7 @@ def build_agents(case: Case, model=None) -> dict[str, Agent]:
     # so Strands stops and asks before it runs.
     executor = Agent(
         name="executor",
+        **quiet,
         description="Submits an approved draft. Gated on human approval.",
         model=model,
         system_prompt=EXECUTOR_PROMPT,

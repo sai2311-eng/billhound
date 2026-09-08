@@ -104,6 +104,11 @@ def cmd_audit(args) -> int:
 
 async def _watch(args) -> int:
     from .graph import run_case
+    from .offline_model import make_offline_model
+
+    if args.offline:
+        print(f"{DIM}  --offline: replies are scripted, not model output. "
+              f"Exercises the graph, not the reasoning.{RESET}")
 
     root = Path(args.samples)
     seen = escalated = 0
@@ -122,8 +127,9 @@ async def _watch(args) -> int:
                 rate_card=card,
             )
             print(f"{DIM}  reading {doc.name} ...{RESET}")
+            model = make_offline_model(case, vendor) if args.offline else None
             try:
-                await run_case(case)
+                await run_case(case, model=model, verbose=args.trace)
             except Exception as exc:
                 print(f"  {doc.name}: agent run failed - {type(exc).__name__}: {exc}",
                       file=sys.stderr)
@@ -173,6 +179,10 @@ def main(argv: list[str] | None = None) -> int:
         "--json", action="store_true", help="Emit escalations as JSON instead of text")
     sub.choices["watch"].add_argument(
         "--trace", action="store_true", help="Print each agent's tool calls")
+    sub.choices["watch"].add_argument(
+        "--offline", action="store_true",
+        help="Drive the graph with a scripted stub instead of Bedrock. No AWS needed. "
+             "Proves the wiring, not the reasoning.")
 
     args = parser.parse_args(argv)
     return args.func(args)
