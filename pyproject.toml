@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "billhound"
+version = "0.1.0"
+description = "An agent that reads every bill and only speaks when it matters."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Sai Kiran" }]
+keywords = ["strands-agents", "aws", "bedrock", "billing", "agents"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "strands-agents>=1.55.0",
+    "strands-agents-tools>=0.8.8",
+    "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+billhound = "billhound.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+lint.select = ["E", "F", "W", "I", "UP", "B", "SIM", "PERF", "RUF"]
+lint.ignore = [
+    # Invoice dates and local run timestamps are genuinely naive wall-clock
+    # values; attaching a timezone to "Rechnungsdatum: 03.09.2026" would invent
+    # precision the document does not have.
+    "DTZ",
+]

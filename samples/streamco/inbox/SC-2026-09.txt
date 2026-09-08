@@ -1,0 +1,17 @@
+STREAMCO EUROPE B.V.
+Keizersgracht 62, 1015 CS Amsterdam
+
+                          RECHNUNG
+
+Kundennummer:      SC-77310
+Rechnungsnummer:   SC-2026-09
+Rechnungsdatum:    05.09.2026
+Faellig am:        19.09.2026
+
+Pos  Code    Bezeichnung                    Menge      Einzelpreis     Betrag
+---------------------------------------------------------------------------
+ 1   PLAN-P  Premium plan                     1          14,99 EUR    14,99 EUR
+---------------------------------------------------------------------------
+                                            RECHNUNGSBETRAG         14,99 EUR
+
+Ihr Abonnement verlaengert sich automatisch um einen Monat.

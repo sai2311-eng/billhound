@@ -1,0 +1,7 @@
+{
+  "vendor": "StreamCo",
+  "expected_unit_prices": {
+    "PLAN-P": "14.99"
+  },
+  "tolerance": "0.01"
+}

@@ -1,0 +1,27 @@
+STADTWERKE MUENCHEN GmbH
+Emmy-Noether-Strasse 2, 80992 Muenchen
+USt-IdNr. DE129524160
+
+                          STROMRECHNUNG
+
+Kundennummer:      K-88214477
+Rechnungsnummer:   SWM-2026-09
+Rechnungsdatum:    03.09.2026
+Faellig am:        17.09.2026
+Abrechnungszeitraum: 01.08.2026 - 31.08.2026
+
+Pos  Code    Bezeichnung                    Menge      Einzelpreis     Betrag
+---------------------------------------------------------------------------
+ 1   GP-01   Grundpreis                       1          14,90 EUR    14,90 EUR
+ 2   AP-01   Arbeitspreis Strom kWh         210           0,38 EUR    79,80 EUR
+ 3   SP-01   Servicepauschale                 1           4,90 EUR     4,90 EUR
+ 4   SP-01   Servicepauschale                 1           4,90 EUR     4,90 EUR
+ 5   VAT     MwSt 19%                         1          19,86 EUR    19,86 EUR
+---------------------------------------------------------------------------
+                                            RECHNUNGSBETRAG        131,36 EUR
+
+Zahlbar ohne Abzug bis zum 17.09.2026 auf das unten genannte Konto.
+Bei Rueckfragen zur Rechnung: rechnung@swm-kundenservice.example
+Widerspruchsfrist: 6 Wochen ab Rechnungsdatum.
+
+Ihr Tarif "M-Strom Basis" wurde zum 01.08.2026 angepasst.

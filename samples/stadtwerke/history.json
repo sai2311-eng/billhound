@@ -1,0 +1,50 @@
+[
+  {
+    "bill_id": "SWM-2026-06",
+    "vendor": "Stadtwerke Muenchen",
+    "account_ref": "K-88214477",
+    "issued": "2026-06-03",
+    "due": "2026-06-17",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "81.63",
+    "line_items": [
+      {"description": "Grundpreis", "quantity": "1", "unit_price": "12.50", "amount": "12.50", "code": "GP-01"},
+      {"description": "Arbeitspreis Strom kWh", "quantity": "160", "unit_price": "0.32", "amount": "51.20", "code": "AP-01"},
+      {"description": "Servicepauschale", "quantity": "1", "unit_price": "4.90", "amount": "4.90", "code": "SP-01"},
+      {"description": "MwSt 19%", "quantity": "1", "unit_price": "13.03", "amount": "13.03", "code": "VAT"}
+    ]
+  },
+  {
+    "bill_id": "SWM-2026-07",
+    "vendor": "Stadtwerke Muenchen",
+    "account_ref": "K-88214477",
+    "issued": "2026-07-03",
+    "due": "2026-07-17",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "85.44",
+    "line_items": [
+      {"description": "Grundpreis", "quantity": "1", "unit_price": "12.50", "amount": "12.50", "code": "GP-01"},
+      {"description": "Arbeitspreis Strom kWh", "quantity": "170", "unit_price": "0.32", "amount": "54.40", "code": "AP-01"},
+      {"description": "Servicepauschale", "quantity": "1", "unit_price": "4.90", "amount": "4.90", "code": "SP-01"},
+      {"description": "MwSt 19%", "quantity": "1", "unit_price": "13.64", "amount": "13.64", "code": "VAT"}
+    ]
+  },
+  {
+    "bill_id": "SWM-2026-08",
+    "vendor": "Stadtwerke Muenchen",
+    "account_ref": "K-88214477",
+    "issued": "2026-08-03",
+    "due": "2026-08-17",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "89.25",
+    "line_items": [
+      {"description": "Grundpreis", "quantity": "1", "unit_price": "12.50", "amount": "12.50", "code": "GP-01"},
+      {"description": "Arbeitspreis Strom kWh", "quantity": "180", "unit_price": "0.32", "amount": "57.60", "code": "AP-01"},
+      {"description": "Servicepauschale", "quantity": "1", "unit_price": "4.90", "amount": "4.90", "code": "SP-01"},
+      {"description": "MwSt 19%", "quantity": "1", "unit_price": "14.25", "amount": "14.25", "code": "VAT"}
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "bill_id": "KB-2026-06",
+    "vendor": "Kabelnetz Bayern",
+    "account_ref": "KB-40021",
+    "issued": "2026-06-05",
+    "due": "2026-06-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "44.99",
+    "line_items": [
+      {
+        "description": "Internet 250 Mbit",
+        "quantity": "1",
+        "unit_price": "39.99",
+        "amount": "39.99",
+        "code": "NET-250"
+      },
+      {
+        "description": "Router Miete",
+        "quantity": "1",
+        "unit_price": "5.00",
+        "amount": "5.00",
+        "code": "HW-01"
+      }
+    ]
+  },
+  {
+    "bill_id": "KB-2026-07",
+    "vendor": "Kabelnetz Bayern",
+    "account_ref": "KB-40021",
+    "issued": "2026-07-05",
+    "due": "2026-07-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "44.99",
+    "line_items": [
+      {
+        "description": "Internet 250 Mbit",
+        "quantity": "1",
+        "unit_price": "39.99",
+        "amount": "39.99",
+        "code": "NET-250"
+      },
+      {
+        "description": "Router Miete",
+        "quantity": "1",
+        "unit_price": "5.00",
+        "amount": "5.00",
+        "code": "HW-01"
+      }
+    ]
+  },
+  {
+    "bill_id": "KB-2026-08",
+    "vendor": "Kabelnetz Bayern",
+    "account_ref": "KB-40021",
+    "issued": "2026-08-05",
+    "due": "2026-08-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "44.99",
+    "line_items": [
+      {
+        "description": "Internet 250 Mbit",
+        "quantity": "1",
+        "unit_price": "39.99",
+        "amount": "39.99",
+        "code": "NET-250"
+      },
+      {
+        "description": "Router Miete",
+        "quantity": "1",
+        "unit_price": "5.00",
+        "amount": "5.00",
+        "code": "HW-01"
+      }
+    ]
+  }
+]
