@@ -1,7 +1,7 @@
 [
   {
-    "bill_id": "SWM-2026-06",
-    "vendor": "Stadtwerke Muenchen",
+    "bill_id": "STW-2026-06",
+    "vendor": "Stadtwerke Musterstadt",
     "account_ref": "K-88214477",
     "issued": "2026-06-03",
     "due": "2026-06-17",
@@ -16,8 +16,8 @@
     ]
   },
   {
-    "bill_id": "SWM-2026-07",
-    "vendor": "Stadtwerke Muenchen",
+    "bill_id": "STW-2026-07",
+    "vendor": "Stadtwerke Musterstadt",
     "account_ref": "K-88214477",
     "issued": "2026-07-03",
     "due": "2026-07-17",
@@ -32,8 +32,8 @@
     ]
   },
   {
-    "bill_id": "SWM-2026-08",
-    "vendor": "Stadtwerke Muenchen",
+    "bill_id": "STW-2026-08",
+    "vendor": "Stadtwerke Musterstadt",
     "account_ref": "K-88214477",
     "issued": "2026-08-03",
     "due": "2026-08-17",

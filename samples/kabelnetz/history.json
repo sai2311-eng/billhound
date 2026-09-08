@@ -1,7 +1,7 @@
 [
   {
     "bill_id": "KB-2026-06",
-    "vendor": "Kabelnetz Bayern",
+    "vendor": "Kabelnetz Musterland",
     "account_ref": "KB-40021",
     "issued": "2026-06-05",
     "due": "2026-06-19",
@@ -27,7 +27,7 @@
   },
   {
     "bill_id": "KB-2026-07",
-    "vendor": "Kabelnetz Bayern",
+    "vendor": "Kabelnetz Musterland",
     "account_ref": "KB-40021",
     "issued": "2026-07-05",
     "due": "2026-07-19",
@@ -53,7 +53,7 @@
   },
   {
     "bill_id": "KB-2026-08",
-    "vendor": "Kabelnetz Bayern",
+    "vendor": "Kabelnetz Musterland",
     "account_ref": "KB-40021",
     "issued": "2026-08-05",
     "due": "2026-08-19",
