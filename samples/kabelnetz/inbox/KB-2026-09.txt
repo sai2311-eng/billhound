@@ -1,0 +1,16 @@
+KABELNETZ BAYERN AG
+Landsberger Str. 110, 80339 Muenchen
+
+                          RECHNUNG
+
+Kundennummer:      KB-40021
+Rechnungsnummer:   KB-2026-09
+Rechnungsdatum:    05.09.2026
+Faellig am:        19.09.2026
+
+Pos  Code    Bezeichnung                    Menge      Einzelpreis     Betrag
+---------------------------------------------------------------------------
+ 1   NET-250 Internet 250 Mbit                1          39,99 EUR    39,99 EUR
+ 2   HW-01   Router Miete                     1           5,00 EUR     5,00 EUR
+---------------------------------------------------------------------------
+                                            RECHNUNGSBETRAG         44,99 EUR

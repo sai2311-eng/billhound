@@ -1,0 +1,154 @@
+[
+  {
+    "bill_id": "SC-2026-01",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-01-05",
+    "due": "2026-01-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-02",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-02-05",
+    "due": "2026-02-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-03",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-03-05",
+    "due": "2026-03-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-04",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-04-05",
+    "due": "2026-04-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-05",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-05-05",
+    "due": "2026-05-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-06",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-06-05",
+    "due": "2026-06-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-07",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-07-05",
+    "due": "2026-07-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  },
+  {
+    "bill_id": "SC-2026-08",
+    "vendor": "StreamCo",
+    "account_ref": "SC-77310",
+    "issued": "2026-08-05",
+    "due": "2026-08-19",
+    "currency": "EUR",
+    "cadence": "monthly",
+    "total": "14.99",
+    "line_items": [
+      {
+        "description": "Premium plan",
+        "quantity": "1",
+        "unit_price": "14.99",
+        "amount": "14.99",
+        "code": "PLAN-P"
+      }
+    ]
+  }
+]
