@@ -46,13 +46,13 @@ d = ImageDraw.Draw(img)
 
 
 def panel(xy, label, colour, fill):
-    x0, y0, x1, y1 = xy
+    x0, y0 = xy[0], xy[1]
     d.rounded_rectangle(xy, 14, fill=fill, outline=colour, width=2)
     d.text((x0 + 20, y0 + 14), label, font=PANEL, fill=colour)
 
 
 def box(xy, title, lines, colour=INK, fill="#ffffff", outline=None):
-    x0, y0, x1, y1 = xy
+    x0, y0 = xy[0], xy[1]
     d.rounded_rectangle(xy, 10, fill=fill, outline=outline or LINE, width=2)
     d.text((x0 + 18, y0 + 16), title, font=BOX_T, fill=colour)
     y = y0 + 50
@@ -106,7 +106,8 @@ box((60, 200, 330, 300), "Raw document",
 panel((380, 176, 1740, 470), "Strands multi-agent graph  ·  GraphBuilder", BLUE, "#fbfcfe")
 
 box((410, 226, 700, 386), "extractor",
-    ["Transcribes into a typed Bill.", "Forbidden from correcting:", "a wrong total is the evidence."],
+    ["Transcribes into a typed Bill.", "Forbidden from correcting:",
+     "a wrong total is the evidence."],
     colour=BLUE, fill=BLUE_BG, outline=BLUE)
 
 box((790, 226, 1080, 386), "auditor",

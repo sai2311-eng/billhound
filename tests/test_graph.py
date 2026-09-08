@@ -50,7 +50,7 @@ def drive(folder: str, vendor: str):
 
 def test_clean_bill_never_reaches_the_strategist():
     """The whole product in one assertion: a correct bill stops at the auditor."""
-    case, result = drive("kabelnetz", "Kabelnetz Bayern")
+    case, result = drive("kabelnetz", "Kabelnetz Musterland")
     visited = [n.node_id for n in result.execution_order]
 
     assert visited == ["extractor", "auditor"]
@@ -60,7 +60,7 @@ def test_clean_bill_never_reaches_the_strategist():
 
 
 def test_overcharged_bill_reaches_the_strategist_and_gets_a_draft():
-    case, result = drive("stadtwerke", "Stadtwerke Muenchen")
+    case, result = drive("stadtwerke", "Stadtwerke Musterstadt")
     visited = [n.node_id for n in result.execution_order]
 
     assert visited == ["extractor", "auditor", "strategist"]
@@ -83,7 +83,7 @@ def test_the_figures_the_agent_reports_come_from_the_rule_engine():
     """The agent may relay the audit, never restate it."""
     from billhound.rules import audit
 
-    case, _ = drive("stadtwerke", "Stadtwerke Muenchen")
+    case, _ = drive("stadtwerke", "Stadtwerke Musterstadt")
     independent = audit(case.bill, case.history, case.rate_card)
 
     assert [d.rule for d in case.report.discrepancies] == [d.rule for d in independent]
@@ -92,7 +92,7 @@ def test_the_figures_the_agent_reports_come_from_the_rule_engine():
 
 def test_extraction_copies_the_wrong_total_rather_than_fixing_it():
     """Silently correcting the invoice would destroy the evidence."""
-    case, _ = drive("stadtwerke", "Stadtwerke Muenchen")
+    case, _ = drive("stadtwerke", "Stadtwerke Musterstadt")
     assert case.bill.total != case.bill.line_item_sum
     assert any(d.rule == "arithmetic_mismatch" for d in case.report.discrepancies)
 
@@ -116,7 +116,7 @@ def executor_with(case: Case, answer: str) -> tuple[Agent, list[str]]:
     tools = {t.tool_name: t for t in build_tools(case)}
     agent = Agent(
         name="executor",
-        model=make_offline_model(case, "Stadtwerke Muenchen"),
+        model=make_offline_model(case, "Stadtwerke Musterstadt"),
         system_prompt=EXECUTOR_PROMPT,
         tools=[tools["submit_to_portal"]],
         interventions=[HumanInTheLoop(allowed_tools=AUTO_APPROVED, ask=ask)],
@@ -125,7 +125,7 @@ def executor_with(case: Case, answer: str) -> tuple[Agent, list[str]]:
 
 
 def test_declining_the_gate_means_nothing_is_submitted():
-    case, _ = drive("stadtwerke", "Stadtwerke Muenchen")
+    case, _ = drive("stadtwerke", "Stadtwerke Musterstadt")
     agent, asked = executor_with(case, "no")
 
     asyncio.run(agent.invoke_async("Submit the approved dispute."))
@@ -137,7 +137,7 @@ def test_declining_the_gate_means_nothing_is_submitted():
 def test_approving_the_gate_still_dry_runs_without_the_live_flag(monkeypatch):
     """Two locks, not one: approval opens the gate, BILLHOUND_LIVE arms the action."""
     monkeypatch.delenv("BILLHOUND_LIVE", raising=False)
-    case, _ = drive("stadtwerke", "Stadtwerke Muenchen")
+    case, _ = drive("stadtwerke", "Stadtwerke Musterstadt")
     agent, asked = executor_with(case, "yes")
 
     asyncio.run(agent.invoke_async("Submit the approved dispute."))
@@ -149,18 +149,18 @@ def test_approving_the_gate_still_dry_runs_without_the_live_flag(monkeypatch):
 
 def test_both_locks_open_lets_the_submission_through(monkeypatch):
     monkeypatch.setenv("BILLHOUND_LIVE", "1")
-    case, _ = drive("stadtwerke", "Stadtwerke Muenchen")
+    case, _ = drive("stadtwerke", "Stadtwerke Musterstadt")
     agent, asked = executor_with(case, "yes")
 
     asyncio.run(agent.invoke_async("Submit the approved dispute."))
 
     assert asked
-    assert case.submitted_ref == "BH-SWM-2026-09"
+    assert case.submitted_ref == "BH-STW-2026-09"
 
 
 @pytest.mark.parametrize("folder,vendor", [
-    ("kabelnetz", "Kabelnetz Bayern"),
-    ("stadtwerke", "Stadtwerke Muenchen"),
+    ("kabelnetz", "Kabelnetz Musterland"),
+    ("stadtwerke", "Stadtwerke Musterstadt"),
     ("streamco", "StreamCo"),
 ])
 def test_every_sample_runs_without_error(folder, vendor):

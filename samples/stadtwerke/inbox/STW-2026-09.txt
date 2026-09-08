@@ -1,11 +1,11 @@
-STADTWERKE MUENCHEN GmbH
-Emmy-Noether-Strasse 2, 80992 Muenchen
-USt-IdNr. DE129524160
+STADTWERKE MUSTERSTADT GmbH
+Musterstrasse 1, 12345 Musterstadt
+USt-IdNr. DE999999999
 
                           STROMRECHNUNG
 
 Kundennummer:      K-88214477
-Rechnungsnummer:   SWM-2026-09
+Rechnungsnummer:   STW-2026-09
 Rechnungsdatum:    03.09.2026
 Faellig am:        17.09.2026
 Abrechnungszeitraum: 01.08.2026 - 31.08.2026
@@ -21,7 +21,7 @@ Pos  Code    Bezeichnung                    Menge      Einzelpreis     Betrag
                                             RECHNUNGSBETRAG        131,36 EUR
 
 Zahlbar ohne Abzug bis zum 17.09.2026 auf das unten genannte Konto.
-Bei Rueckfragen zur Rechnung: rechnung@swm-kundenservice.example
+Bei Rueckfragen zur Rechnung: rechnung@stadtwerke-musterstadt.example
 Widerspruchsfrist: 6 Wochen ab Rechnungsdatum.
 
-Ihr Tarif "M-Strom Basis" wurde zum 01.08.2026 angepasst.
+Ihr Tarif "Muster-Strom Basis" wurde zum 01.08.2026 angepasst.

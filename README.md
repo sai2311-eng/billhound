@@ -26,14 +26,14 @@ the shape of work that should not belong to a human.
 It reads every bill. It stays quiet about almost all of them.
 
 ```
-  Kabelnetz Bayern KB-2026-09: clean, nothing to report
+  Kabelnetz Musterland KB-2026-09: clean, nothing to report
 
-  DISPUTE  Stadtwerke Muenchen  invoice SWM-2026-09
+  DISPUTE  Stadtwerke Musterstadt  invoice STW-2026-09
   26.90 EUR at stake
-  Stadtwerke Muenchen overcharged 26.90 EUR on invoice SWM-2026-09 across 4 items.
+  Stadtwerke Musterstadt overcharged 26.90 EUR on invoice STW-2026-09 across 4 items.
 
   [HIGH  ] 'Arbeitspreis Strom kWh' billed above the agreed rate
-           Contract rate is 0.32 EUR; invoice SWM-2026-09 charges 0.38 x210 = 79.80 EUR.
+           Contract rate is 0.32 EUR; invoice STW-2026-09 charges 0.38 x210 = 79.80 EUR.
            rule: off_contract_rate  |  12.60 EUR
 
   [HIGH  ] Line items do not sum to the invoice total
@@ -41,12 +41,12 @@ It reads every bill. It stays quiet about almost all of them.
            rule: arithmetic_mismatch  |  7.00 EUR
 
   [HIGH  ] 'servicepauschale' billed 2 times
-           'servicepauschale' at 4.90 EUR appears 2 times on invoice SWM-2026-09.
+           'servicepauschale' at 4.90 EUR appears 2 times on invoice STW-2026-09.
            rule: duplicate_line_item  |  4.90 EUR
 
   ...
 
-  Drafted email to rechnung@swm-kundenservice.example
+  Drafted email to rechnung@stadtwerke-musterstadt.example
   Nothing has been sent. This is waiting on you.
 
   3 bills read. 1 handled silently. 2 need you. 26.90 EUR at stake.
